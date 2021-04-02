@@ -3,5 +3,10 @@ https://www.codechef.com/problems/FLOW004
 Solution accepted - https://www.codechef.com/viewsolution/44378797
 is wrong.
 
+n = int(input())
+for i in range(n):
+    a = input()
+    print(int(a[0])+int(a[len(a)-1]))
+    
 Reason:
 On input of single digit number- giving incorrect output.
