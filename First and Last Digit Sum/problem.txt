@@ -1,0 +1,7 @@
+https://www.codechef.com/problems/FLOW004
+
+Solution accepted - https://www.codechef.com/viewsolution/44378797
+is wrong.
+
+Reason:
+On input of single digit number- giving incorrect output.
