@@ -1,37 +1,25 @@
 #include <stdio.h>
-#include <string.h>
-int main()
-{
-    int t,n;
-    scanf("%d\n", &t);
-    for (int i = 0; i < t; i++)
-    {
-        scanf("%d\n", &n);
-        long int arr[n];
-        for (int j = 0; j < n; j++)
-        {
-            scanf("%d", &arr[j]);
-        }
-        long int mini=1000000000;
-        for (int x = 0; x < n; x++)
-        {
-            for (int y = 0; y < n; y++)
-            {
-                if (arr[x]>arr[y])
-                {
-                    if (mini> arr[x] - arr[y])
-                    {
-                        mini= arr[x] - arr[y];
-                    }
-                    
-                }
-                
-            }
-    
-        }
-        printf("%ld", mini);
-    }
-    
-    
-    return 0;
+
+int main(void) {
+	int n, p, d, c;
+	scanf("%d", &n);
+	
+	while(n--){
+	    scanf("%d", &p);
+	    int s[p];
+	    for(int i=0;i<p;i++){
+	        scanf("%d", &s[i]);
+	    }
+	    d = (s[0]-s[1])>0?(s[0]-s[1]):(s[1]-s[0]);
+	    for(int i=0;i<p-1;i++){
+	      for(int j=i+1;j<p;j++){
+	          c = (s[i]-s[j])>0?(s[i]-s[j]):(s[j]-s[i]);
+	            if(d>c){
+	                d = c;
+	            }
+	        }      
+	    }
+	    printf("%d\n", d);
+	}
+	return 0;
 }
