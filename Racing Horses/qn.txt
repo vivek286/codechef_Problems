@@ -1,0 +1,2 @@
+same code gives correct answer in vs code but incorect output in codechef c compiler
+question- https://www.codechef.com/problems/HORSES
